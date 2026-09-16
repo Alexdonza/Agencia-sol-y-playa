@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PCE-Agencia | Sol y Playa Tours</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="login" class="login">
+  <div class="login-card">
+    <div class="brand-mark">☀</div>
+    <h1>Sol y Playa Tours</h1><p>Gestión de Agencia de Viajes</p>
+    <input id="loginUser" placeholder="Usuario" value="admin">
+    <input id="loginPass" type="password" placeholder="Contraseña" value="admin123">
+    <button onclick="login()">Iniciar sesión</button>
+    <small>Demo: admin / admin123</small>
+  </div>
+</div>
+
+<div id="app" class="app hidden">
+<aside>
+  <div class="brand"><span>☀</span><div><b>Sol y Playa</b><small>Tours · PCE-Agencia</small></div></div>
+  <nav>
+    <button class="active" data-page="dashboard">▦ Dashboard</button>
+    <button data-page="clientes">👥 Clientes</button>
+    <button data-page="reservas">✈ Reservas</button>
+    <button data-page="itinerarios">🗺 Itinerarios</button>
+    <button data-page="servicios">▣ Servicios</button>
+    <button data-page="proveedores">🏨 Proveedores</button>
+    <button data-page="transacciones">💳 Transacciones</button>
+    <button data-page="facturas">🧾 Facturas</button>
+    <button data-page="reportes">📊 Reportes</button>
+  </nav>
+  <button class="logout" onclick="logout()">↪ Cerrar sesión</button>
+</aside>
+<main>
+<header><div><h2 id="pageTitle">Dashboard</h2><p id="date"></p></div><div class="user">Administrador <span>AD</span></div></header>
+<section id="content"></section>
+</main>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
